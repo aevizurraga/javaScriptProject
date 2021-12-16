@@ -5,11 +5,6 @@ padding: 0;
 
 body::-webkit-scrollbar {
 display: none;
-background-color: rgb(38, 38, 38);
-color: rgb(38, 38, 38);
-height: 100vh;
-font-family: 'Oswald', sans-serif;
-
 }
 
 .container {
@@ -18,15 +13,10 @@ height: 100%;
 overflow-y: scroll;
 scroll-behavior: smooth;
 scroll-snap-type: y mandatory;
-
 }
 
 section {
 scroll-snap-align: center;
-}
-
-.leaflet-container {
-background: rgb(38, 38, 38)
 }
 
 body {
@@ -36,9 +26,9 @@ font-family: 'Oswald', sans-serif;
 overflow: hidden;
 }
 
-.title-page .first-page .second-page{
-scroll-snap-align: center;
-}
+
+/* Title Page */
+
 .title{
 grid-area: title;
 place-self: center;
@@ -59,9 +49,12 @@ grid-template-areas:
 background-image: linear-gradient(to right, #fc9272 0% 50%, rgb(38, 38, 38) 50% 100% )
 }
 
+
+/* First Page */
+
 .leaflet-container {
-background: rgb(38, 38, 38)
-}
+    background: rgb(38, 38, 38)
+    }
 
 .map2{
 grid-area:map2;
@@ -71,25 +64,6 @@ height: 80vh;
 
 .gloss1 {
 grid-area: gloss1;
-place-self: center;
-font-size: 1em;
-}
-
-.gloss2 {
-grid-area: gloss2;
-text-align: left;
-place-self: center;
-font-size: 1em;
-}
-
-.map {
-grid-area: map;
-place-self: center;
-height: 80vh;
-}
-
-.info {
-grid-area: info;
 place-self: center;
 font-size: 1em;
 }
@@ -107,6 +81,9 @@ grid-template-areas:
 " . . . . . . ";
 }
 
+
+/* Second Page */
+
 button {
 height: 100%;
 width: 100%;
@@ -115,7 +92,7 @@ background-color: #fc9272;
 color: rgb(38, 38, 38);
 opacity: 1;
 text-align: center;
-font-size: 1.1em;
+font-size: 1em;
 font-family: 'Oswald', sans-serif;
 }
 
@@ -127,6 +104,25 @@ background: lightsalmon;
 grid-area: button;
 place-self: center;
 }
+
+.gloss2 {
+    grid-area: gloss2;
+    text-align: left;
+    place-self: center;
+    font-size: 1em;
+    }
+    
+.map {
+    grid-area: map;
+    place-self: center;
+    height: 80vh;
+    }
+    
+.info {
+    grid-area: info;
+    place-self: center;
+    font-size: 1em;
+    }
 
 .second-page{
 background-image: linear-gradient(to right, #fc9272 0% 50%, rgb(38, 38, 38) 50% 100% );
@@ -144,3 +140,26 @@ grid-template-areas:
 " .      .      .      .      .   . ";
 }
 
+
+/* Data Page */ 
+
+.data {
+    grid-area: data;
+    place-self: end;
+    }
+    
+.empty-data {
+    grid-area: emptyData;
+    place-self: center;
+    }
+    
+.data-page {
+    display: grid;
+    grid-template-columns: 5% 40% 5% 5% 40% 5%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: 
+    " . . . . . ."
+    " . emptyData . . data  . "
+    " . . . . . .";
+    background-image: linear-gradient(to right, rgb(38, 38, 38) 0% 50%, #fc9272 50% 100% );
+    }
