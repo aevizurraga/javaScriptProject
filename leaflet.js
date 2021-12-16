@@ -149,7 +149,7 @@ $.getJSON("merged_1.geojson", function (data) {
 
   L.easyButton('<i class="material-icons">travel_explore</i>', function () {
     firstMap.setView([34.01624, -7.38281], 2);
-  }).addTo(firstMap);
+  }).addTo(firstMap).addTo(secondMap);
 
   line = L.polyline(exports, {
     color: '#fc9272',
